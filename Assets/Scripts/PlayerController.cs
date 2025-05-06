@@ -65,13 +65,9 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if (!isGrounded) return;
-
-        List<ContactPoint2D> contacts = new List<ContactPoint2D>();
-        cc.GetContacts(contacts);
-        if (contacts.Count > 0)
+        if (isGrounded)
         {
-            rb.linearVelocity += contacts[0].normal * jumpSpeed;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpSpeed);
         }
     }
 }
