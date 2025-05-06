@@ -11,7 +11,7 @@ public class Door : MonoBehaviour
     { 
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("End");
+            SceneManager.LoadScene("EndCredit");
         }
     }
 }
